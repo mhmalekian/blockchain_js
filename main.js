@@ -71,5 +71,9 @@ mhmCoin.addBlock(new Block(2,"02/03/2019",{amont: 6}));
 mhmCoin.addBlock(new Block(1,"05/04/2019",{amont: 8}));
 
 //console.log(JSON.stringify(mhmCoin,null,4));
+console.log("mhmCoin BlockChain is valid? "+mhmCoin.isChainValid());
+//-----try to change block in blockChain but it works amazing against changes!!!!
+mhmCoin.chain[1].data={amount: 8};
+mhmCoin.chain[1].Hash=mhmCoin.chain[1].calculateHash();
 
 console.log("mhmCoin BlockChain is valid? "+mhmCoin.isChainValid());
